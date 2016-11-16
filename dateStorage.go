@@ -1,5 +1,5 @@
 package overtime
 
 type DateStorage interface {
-	GetDate(int) Date
+	Date(int) Date
 }

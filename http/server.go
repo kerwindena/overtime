@@ -26,6 +26,8 @@ func NewServer(dateStorage overtime.DateStorage) *Server {
 		templates:   template.Must(template.ParseGlob("templates/*.html")),
 	}
 
+	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
+	mux.HandleFunc("/api/getDateRange/", apiGetDateRange(srv))
 	mux.HandleFunc("/", index(srv))
 
 	return srv

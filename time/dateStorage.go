@@ -17,7 +17,7 @@ func NewDateStorage() *DateStorage {
 	}
 }
 
-func (ds *DateStorage) GetDate(day int) overtime.Date {
+func (ds *DateStorage) Date(day int) overtime.Date {
 	ds.rwMutex.RLock()
 	date, ok := ds.storage[day]
 	ds.rwMutex.RUnlock()

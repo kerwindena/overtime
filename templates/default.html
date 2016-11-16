@@ -3,18 +3,21 @@
   <head>
     <title>Test</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="static/script.js"></script>
   </head>
   <body>
+    <a href="javascript:loadPreviousDays()">Load more</a>
     <table>
       <tbody>
-        {{ range  $index, $element := . }}
-        <tr>
-          <td>
-            {{ $element }}
+        <tr class="rowExample">
+          <td class="day">
+          </td>
+          <td class="date">
           </td>
         </tr>
-        {{ end }}
       </tbody>
     </table>
+    <a href="javascript:loadSubsequentDays()">Load more</a>
   </body>
 </html>

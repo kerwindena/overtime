@@ -20,6 +20,6 @@ func (date *Date) String() string {
 	return date.time.String()
 }
 
-func (date *Date) GetDay() int {
+func (date *Date) Day() int {
 	return date.day
 }

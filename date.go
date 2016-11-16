@@ -2,7 +2,7 @@ package overtime
 
 type Date interface {
 	String() string
-	GetDay() int
+	Day() int
 }
 
 type Time interface {
